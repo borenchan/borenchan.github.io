@@ -1,20 +1,149 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="zh-CN">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>程易寻的主页</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boren Chan的主页</title>
+    <style>
+        /* 基础重置与全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* 主容器 */
+        .container {
+            max-width: 800px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* 头部 */
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        /* 个人简介 */
+        .bio {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        /* 技术栈 */
+        .skills {
+            margin: 30px 0;
+        }
+
+        .skills h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #fff;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .skill-list {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .skill-list li {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* 座右铭 */
+        .motto {
+            font-size: 1.4rem;
+            font-style: italic;
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            border-left: 4px solid #f093fb;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+            }
+            header h1 {
+                font-size: 2.8rem;
+            }
+            header p, .bio, .motto {
+                font-size: 1rem;
+            }
+            .skills h2 {
+                font-size: 1.5rem;
+            }
+            .skill-list li {
+                font-size: 1rem;
+                padding: 8px 16px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-    <noscript>
-      <strong>We're sorry but <%= webpackConfig.name %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app">程易寻的主页</div>
-    <!-- built files will be auto injected -->
-</body>
+    <div class="container">
+        <header>
+            <h1>Boren Chan</h1>
+            <p>后端工程师</p>
+        </header>
 
+        <div class="bio">
+            <p>你好！我是一名专注于构建稳健、可扩展系统的后端工程师。</p>
+        </div>
+
+        <div class="skills">
+            <h2>技术栈</h2>
+            <ul class="skill-list">
+                <li>Java</li>
+                <li>Rust</li>
+                <li>Spring Boot</li>
+                <li>微服务</li>
+                <li>数据库设计</li>
+            </ul>
+        </div>
+
+        <div class="motto">
+            “一个 Java 程序员和一个 Rust 语言的爱好者，编码让 Java 再次伟大。🤪”
+        </div>
+    </div>
+</body>
 </html>
